@@ -1,0 +1,18 @@
+
+h1{
+    text-align:center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.product {
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}

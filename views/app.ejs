@@ -1,0 +1,42 @@
+<!-- embed javascript and html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <title>Products</title>
+</head>
+<body>
+    <style>
+        h1{
+    text-align:center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.product {
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+    </style>
+    <h1>Product list</h1>
+    <div class="container">
+        <% products.forEach(product => { %>
+<div class="product">
+    <img src="<%= product.thumbnail %>" alt="<%= product.title %>">
+    <h2><%= product.title %></h2>
+    <p><%= product.price %></p>
+</div>
+        <% }) %>
+    </div>
+</body>
+</html>
